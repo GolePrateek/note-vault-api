@@ -1,0 +1,30 @@
+{
+  "name": "notevault-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "test": "export NODE_ENV=test || SET \"NODE_ENV=test\" && jest",
+    "test-watch": "nodemon --exec \"npm test\""
+  },
+  "author": "Prateek Gole",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "crypto-js": "^3.1.9-1",
+    "csprng": "^0.1.2",
+    "express": "^4.14.0",
+    "jsonwebtoken": "^7.1.9",
+    "lodash": "^4.17.10",
+    "mongodb": "^3.1.0-beta4",
+    "mongoose": "^4.5.9",
+    "pbkdf2": "^3.0.16",
+    "validator": "^10.2.0"
+  },
+  "devDependencies": {
+    "jest": "^22.4.3",
+    "supertest": "^3.1.0"
+  }
+}
