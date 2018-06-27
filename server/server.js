@@ -1,8 +1,10 @@
 require('./config/config.js');
 const express = require('express');
+var cors = require('cors');
 const bodyParser = require('body-parser');
 const _ = require('lodash');
 const {ObjectID} = require('mongodb');
+
 
 const {cryptoMagic,getEncryptionKey,generateDerivedKey,encryptNoteBody} = require('./utils/utils')
 const {User} = require('./model/user');
@@ -11,6 +13,8 @@ const {mongoose} = require('./db/mongoose');
 const {authentication} = require('./middleware/authentication');
 
 const app = express();
+
+app.use(cors());
 
 app.use(bodyParser.json())
 
