@@ -14,7 +14,11 @@ const {authentication} = require('./middleware/authentication');
 
 const app = express();
 
-app.use(cors());
+let corsConfig = {
+	exposedHeaders:'x-auth'
+};
+
+app.use(cors(corsConfig));
 
 app.use(bodyParser.json())
 
